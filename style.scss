@@ -8,32 +8,46 @@ header{
     font-size: 32px;
     line-height: 64px;
     cursor: pointer;
+    user-select: none;
   }
 }
-
 .hidden{
   display: none;
 }
-
 #close{
   z-index: 1;
 }
 
-.show{
+#menu-area{
   text-align: center;
-  font-size: 30px;
+  background: rgba(255,255,255,0.9);
   position: fixed;
   top: 0;
-  bottom: 0;
   right: 0;
+  bottom: 0;
   left: 0;
-  padding-top: 100px;
-  background: rgba(255,255,255,0.9);
-  transform: none;
-} 
-a{
-  display: block;
-  margin-top: 20px;
-  transform: translateY(16px);
-  transition: transform .3s;
+  li{
+    display: block;
+    font-size: 24px;
+    margin-top: 20px;
+    opacity: 0;
+    &:nth-child(1){
+      margin-top: 120px;
+    }
+  }
+  &.show li{
+    opacity: 1;
+    transform: none;
+    animation: fadeIn .3s;
+  }
+}
+
+@keyframes fadeIn{
+  0%{
+    transform:translateY(16px);
+    opacity:0;
+  }
+  100%{
+    opacity: 1;
+  }
 }

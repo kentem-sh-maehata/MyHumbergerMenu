@@ -4,7 +4,6 @@
   const menuArea = document.getElementById('menu-area')
 
   open?.addEventListener('click',()=>{
-    console.log(menuArea)
     menuArea?.classList.add('show')
     menuArea?.classList.remove('hidden')
     

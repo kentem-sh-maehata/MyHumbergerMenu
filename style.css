@@ -9,6 +9,9 @@ header span {
   font-size: 32px;
   line-height: 64px;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .hidden {
@@ -19,20 +22,36 @@ header span {
   z-index: 1;
 }
 
-.show {
+#menu-area {
   text-align: center;
-  font-size: 30px;
+  background: rgba(255, 255, 255, 0.9);
   position: fixed;
   top: 0;
-  bottom: 0;
   right: 0;
+  bottom: 0;
   left: 0;
-  padding-top: 100px;
-  background: rgba(255, 255, 255, 0.9);
+}
+#menu-area li {
+  display: block;
+  font-size: 24px;
+  margin-top: 20px;
+  opacity: 0;
+}
+#menu-area li:nth-child(1) {
+  margin-top: 120px;
+}
+#menu-area.show li {
+  opacity: 1;
   transform: none;
+  animation: fadeIn 0.3s;
 }
 
-a {
-  display: block;
-  margin-top: 20px;
+@keyframes fadeIn {
+  0% {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */
