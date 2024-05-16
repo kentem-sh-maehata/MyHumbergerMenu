@@ -1,0 +1,52 @@
+header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+}
+header span {
+  font-size: 32px;
+  line-height: 64px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#close {
+  z-index: 1;
+}
+
+#menu-area {
+  text-align: center;
+  font-size: 30px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-top: 100px;
+}
+#menu-area a {
+  display: block;
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+#menu-area .show {
+  background: rgba(255, 255, 255, 0.9);
+  opacity: 1;
+  transform: none;
+}
+#menu-area .show :nth-child(1) {
+  transition-delay: 0.1s;
+}
+#menu-area .show :nth-child(2) {
+  transition-delay: 0.2s;
+}
+#menu-area .show :nth-child(3) {
+  transition-delay: 0.3s;
+}/*# sourceMappingURL=style.css.map */
